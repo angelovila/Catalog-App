@@ -1,0 +1,30 @@
+{% extends "header.html" %}
+{% block body %}
+<body>
+
+creation of new product
+
+<div class='left'>
+<form action ="{{ url_for('create_product_page')}}" method = 'post'>
+	<p>name:</p>
+		<input type = 'text' size='30' name='name'>
+
+	<p>description:</p>
+		<input type = 'text' size='30' name='description'>
+	<p>image(url):</p>
+		<input type = 'text' size='30' name='image'>
+	<p>category:</p>
+		<select name = "category">
+			{% for category in categories %}
+			<option value = "{{category.id}}"> {{category.name}} </option>
+			{% endfor %}
+	<p>
+<input type='submit' value='Submit'>
+	</p>
+
+<a href = '{{url_for('latest_items')}}'>cancel</a>
+</form>
+
+</div>
+</body>
+{% endblock %}

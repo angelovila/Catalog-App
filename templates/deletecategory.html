@@ -1,0 +1,22 @@
+{% extends "header.html" %}
+{% block body %}
+<body>
+
+<div class='left'>
+
+are you sure you want to delete category {{category.name}}
+
+
+<form method = 'post'>
+
+	<button type="submit" id="submit" type="submit">
+	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</button>
+	
+
+</form>
+
+
+<a href = '{{url_for('category_page',category_name = category.name, category_id = category.id)}}'> Cancel </a>
+</div>
+</body>
+{% endblock %}

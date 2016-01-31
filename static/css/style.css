@@ -1,0 +1,24 @@
+
+.top {color: white;
+	background-color: black;
+	max-width: 1200px;
+	padding: 10px;
+}
+.row {background-color: silver;
+	width: 1200px;
+	padding: 10px;
+	text-align: center;
+}
+.clickable {background-color: gray;
+	color:black;
+	width: 1200px;
+	padding: 5px;
+}
+
+.left {width: 1200px;
+	background-color:silver;
+	color:black;
+}
+.right {width: 50%;
+	padding: 5px;
+}

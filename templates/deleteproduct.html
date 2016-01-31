@@ -1,0 +1,21 @@
+{% extends "header.html" %}
+{% block body %}
+<body>
+
+<div class='left'>
+are you sure you want to delete product {{item.name}}?
+
+<form method = 'post'>
+
+	<button type="submit" id="submit" type="submit">
+	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</button>
+	
+
+</form>
+
+
+<a href = '{{url_for('product_page',product_category_id = item.categoryID, product_name = item.name, product_id = item.id)}}'> Cancel </a>
+</div>
+
+</body>
+{% endblock %}

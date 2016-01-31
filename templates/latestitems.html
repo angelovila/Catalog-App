@@ -1,0 +1,26 @@
+
+{% extends "header.html" %}
+{% block body %}
+<body>
+<div class='row'>
+	<div class='left'>
+
+		<div class='clickable'><b>create new <a href='{{url_for('create_category_page')}}'>category</b></a>
+		<br>
+	</div>
+	<h4>list of categories</h4>
+	{% for category in categories%}
+	<li> <a href= '{{url_for('category_page', category_name = category.name, category_id = category.id)}}'> {{category.name}} </a> </li>
+	{% endfor %}
+	</div>
+	<div class='left'>
+	<div class='clickable'>create new <a href='{{url_for('create_product_page')}}'>product</a>
+		<br>
+	</div>
+	<h4>list of latest items <h4>
+	{% for item in items%}
+	<li> <a href = '{{url_for('product_page', product_category_id=item.categoryID, product_name = item.name, product_id = item.id)}}'> {{item.name}}</a> </li>
+	{% endfor %}
+</body>
+{% endblock %}
+
